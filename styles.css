@@ -1,0 +1,75 @@
+body {
+  background-color: #fff8f8;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #b85c8a;
+  font-size: 1.5rem;
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary {
+  background-color: #f4a7bb;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #ec799b;
+}
+
+footer {
+  background-color: #ffd6e0;
+  color: #b85c8a;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #b85c8a;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(184,92,138,1)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.nav-link {
+  color: #b85c8a;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #ec799b;
+}

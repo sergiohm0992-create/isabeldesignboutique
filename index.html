@@ -11,130 +11,49 @@
       rel="stylesheet"
     />
 
-    <style>
-      body {
-        background-color: #fff8f8;
-        font-family: "Poppins", sans-serif;
-      }
-
- .navbar {
-  background-color: #ffffff; /* Fondo blanco */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Sombra ligera */
-}
-
-
-      .navbar-brand {
-        font-weight: bold;
-        color: #b85c8a;
-        font-size: 1.5rem;
-      }
-
-      .card {
-        border: none;
-        border-radius: 15px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-      }
-
-      .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-      }
-
-      .btn-primary {
-        background-color: #f4a7bb;
-        border: none;
-      }
-
-      .btn-primary:hover {
-        background-color: #ec799b;
-      }
-
-      footer {
-        background-color: #ffd6e0;
-        color: #b85c8a;
-        padding: 20px 0;
-        text-align: center;
-        margin-top: 40px;
-      }
-
-      footer a {
-        color: #b85c8a;
-        text-decoration: none;
-        font-weight: 500;
-      }
-
-      footer a:hover {
-        text-decoration: underline;
-      }
-      .navbar-toggler {
-  border: none;
-}
-
-.navbar-toggler:focus {
-  box-shadow: none;
-}
-
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(184,92,138,1)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
-
-.nav-link {
-  color: #b85c8a;
-  transition: color 0.2s ease;
-}
-
-.nav-link:hover {
-  color: #ec799b;
-}
-
-    </style>
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
     <!-- Navbar -->
-<nav class="navbar navbar-expand-lg" style="background-color: white; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-  <div class="container d-flex flex-column align-items-center">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container d-flex flex-column align-items-center">
+        <!-- Menú (arriba) -->
+        <div class="w-100 d-flex justify-content-end">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMenu"
+            aria-controls="navbarMenu"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
 
-    <!-- Menú (arriba) -->
-    <div class="w-100 d-flex justify-content-end">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarMenu"
-        aria-controls="navbarMenu"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
+        <div class="collapse navbar-collapse w-100" id="navbarMenu">
+          <ul class="navbar-nav ms-auto text-end">
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="#">Catálogo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="#">Contacto</a>
+            </li>
+          </ul>
+        </div>
 
-    <div class="collapse navbar-collapse w-100" id="navbarMenu">
-      <ul class="navbar-nav ms-auto text-end">
-        <li class="nav-item">
-          <a class="nav-link fw-semibold" href="#">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-semibold" href="#">Catálogo</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-semibold" href="#">Contacto</a>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Logo (debajo del menú) -->
-    <a class="navbar-brand mt-2" href="#">
-      <img src="./assets/logo/logo.jpg" alt="ISA Designs Boutique" height="100" class="img-fluid" />
-    </a>
-
-  </div>
-</nav>
-
-
-
-
+        <!-- Logo (debajo del menú) -->
+        <a class="navbar-brand mt-2" href="#">
+          <img src="./assets/logo/logo.jpg" alt="ISA Designs Boutique" height="100" class="img-fluid" />
+        </a>
+      </div>
+    </nav>
 
     <!-- Galería -->
     <div class="container my-5">
@@ -142,21 +61,16 @@
         Catálogo de Ropa Femenina
       </h2>
       <div class="row g-4">
+
         <!-- Producto 1 -->
         <div class="col-12 col-sm-6 col-md-4">
           <div class="card">
-            <img
-              src="./assets/fotos/zapatos/botas001.jpg"
-              class="card-img-top"
-              alt="Vestido Rosa"
-            />
+            <img src="./assets/fotos/zapatos/botas001.jpg" class="card-img-top" alt="Vestido Rosa" />
             <div class="card-body text-center">
               <h5 class="card-title">Vestido Rosa</h5>
               <p class="card-text">$799 MXN</p>
-              <button
-                class="btn btn-primary"
-                onclick="verDetalles('Vestido Rosa', 'Vestido elegante en tono pastel, ideal para eventos de día.', 'https://via.placeholder.com/400x400?text=Vestido+Rosa')"
-              >
+              <button class="btn btn-primary"
+                onclick="verDetalles('Vestido Rosa', 'Vestido elegante en tono pastel, ideal para eventos de día.', 'https://via.placeholder.com/400x400?text=Vestido+Rosa')">
                 Ver detalles
               </button>
             </div>
@@ -166,18 +80,12 @@
         <!-- Producto 2 -->
         <div class="col-12 col-sm-6 col-md-4">
           <div class="card">
-            <img
-              src="./assets/fotos/zapatos/sandalias001.jpg"
-              class="card-img-top"
-              alt="Blusa Encaje"
-            />
+            <img src="./assets/fotos/zapatos/sandalias001.jpg" class="card-img-top" alt="Blusa Encaje" />
             <div class="card-body text-center">
               <h5 class="card-title">Blusa de Encaje</h5>
               <p class="card-text">$499 MXN</p>
-              <button
-                class="btn btn-primary"
-                onclick="verDetalles('Blusa de Encaje', 'Blusa romántica con encaje delicado y corte femenino.', 'https://via.placeholder.com/400x400?text=Blusa+Encaje')"
-              >
+              <button class="btn btn-primary"
+                onclick="verDetalles('Blusa de Encaje', 'Blusa romántica con encaje delicado y corte femenino.', 'https://via.placeholder.com/400x400?text=Blusa+Encaje')">
                 Ver detalles
               </button>
             </div>
@@ -187,18 +95,12 @@
         <!-- Producto 3 -->
         <div class="col-12 col-sm-6 col-md-4">
           <div class="card">
-            <img
-              src="./assets/fotos/zapatos/zapatillas001.jpg"
-              class="card-img-top"
-              alt="Falda Floral"
-            />
+            <img src="./assets/fotos/zapatos/zapatillas001.jpg" class="card-img-top" alt="Falda Floral" />
             <div class="card-body text-center">
               <h5 class="card-title">Falda Floral</h5>
               <p class="card-text">$599 MXN</p>
-              <button
-                class="btn btn-primary"
-                onclick="verDetalles('Falda Floral', 'Falda ligera con estampado floral y vuelo natural.', 'https://via.placeholder.com/400x400?text=Falda+Floral')"
-              >
+              <button class="btn btn-primary"
+                onclick="verDetalles('Falda Floral', 'Falda ligera con estampado floral y vuelo natural.', 'https://via.placeholder.com/400x400?text=Falda+Floral')">
                 Ver detalles
               </button>
             </div>
@@ -208,18 +110,12 @@
         <!-- Producto 4 -->
         <div class="col-12 col-sm-6 col-md-4">
           <div class="card">
-            <img
-              src="https://via.placeholder.com/400x400?text=Bolso+Beige"
-              class="card-img-top"
-              alt="Bolso Beige"
-            />
+            <img src="https://via.placeholder.com/400x400?text=Bolso+Beige" class="card-img-top" alt="Bolso Beige" />
             <div class="card-body text-center">
               <h5 class="card-title">Bolso Beige</h5>
               <p class="card-text">$699 MXN</p>
-              <button
-                class="btn btn-primary"
-                onclick="verDetalles('Bolso Beige', 'Bolso elegante con detalles dorados, ideal para combinar.', 'https://via.placeholder.com/400x400?text=Bolso+Beige')"
-              >
+              <button class="btn btn-primary"
+                onclick="verDetalles('Bolso Beige', 'Bolso elegante con detalles dorados, ideal para combinar.', 'https://via.placeholder.com/400x400?text=Bolso+Beige')">
                 Ver detalles
               </button>
             </div>
@@ -229,18 +125,12 @@
         <!-- Producto 5 -->
         <div class="col-12 col-sm-6 col-md-4">
           <div class="card">
-            <img
-              src="https://via.placeholder.com/400x400?text=Blazer+Crema"
-              class="card-img-top"
-              alt="Blazer Crema"
-            />
+            <img src="https://via.placeholder.com/400x400?text=Blazer+Crema" class="card-img-top" alt="Blazer Crema" />
             <div class="card-body text-center">
               <h5 class="card-title">Blazer Crema</h5>
               <p class="card-text">$899 MXN</p>
-              <button
-                class="btn btn-primary"
-                onclick="verDetalles('Blazer Crema', 'Blazer suave color crema, perfecto para ocasiones formales.', 'https://via.placeholder.com/400x400?text=Blazer+Crema')"
-              >
+              <button class="btn btn-primary"
+                onclick="verDetalles('Blazer Crema', 'Blazer suave color crema, perfecto para ocasiones formales.', 'https://via.placeholder.com/400x400?text=Blazer+Crema')">
                 Ver detalles
               </button>
             </div>
@@ -250,51 +140,31 @@
         <!-- Producto 6 -->
         <div class="col-12 col-sm-6 col-md-4">
           <div class="card">
-            <img
-              src="https://via.placeholder.com/400x400?text=Accesorio+Dorado"
-              class="card-img-top"
-              alt="Accesorio Dorado"
-            />
+            <img src="https://via.placeholder.com/400x400?text=Accesorio+Dorado" class="card-img-top" alt="Accesorio Dorado" />
             <div class="card-body text-center">
               <h5 class="card-title">Accesorio Dorado</h5>
               <p class="card-text">$299 MXN</p>
-              <button
-                class="btn btn-primary"
-                onclick="verDetalles('Accesorio Dorado', 'Collar dorado con detalles finos, ideal para complementar.', 'https://via.placeholder.com/400x400?text=Accesorio+Dorado')"
-              >
+              <button class="btn btn-primary"
+                onclick="verDetalles('Accesorio Dorado', 'Collar dorado con detalles finos, ideal para complementar.', 'https://via.placeholder.com/400x400?text=Accesorio+Dorado')">
                 Ver detalles
               </button>
             </div>
           </div>
         </div>
+
       </div>
     </div>
 
     <!-- Modal -->
-    <div
-      class="modal fade"
-      id="detalleModal"
-      tabindex="-1"
-      aria-hidden="true"
-    >
+    <div class="modal fade" id="detalleModal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="detalleTitulo"></h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Cerrar"
-            ></button>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
           </div>
           <div class="modal-body text-center">
-            <img
-              id="detalleImagen"
-              src=""
-              alt="Producto"
-              class="img-fluid rounded mb-3"
-            />
+            <img id="detalleImagen" src="" alt="Producto" class="img-fluid rounded mb-3" />
             <p id="detalleDescripcion"></p>
           </div>
         </div>
@@ -303,26 +173,13 @@
 
     <!-- Footer -->
     <footer>
-      <p>
-        © 2025 ISA Designs Boutique | <a href="#">Instagram</a> |
-        <a href="#">Facebook</a>
-      </p>
+      <p>© 2025 ISA Designs Boutique | <a href="https://www.instagram.com/isadesingsboutique_ags?igsh=MThuNno4eml2YmdzOA==">Instagram</a> | <a href="https://www.facebook.com/share/1BRVddgUat/">Facebook</a></p>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- JS Modal -->
-    <script>
-      function verDetalles(titulo, descripcion, imagen) {
-        document.getElementById("detalleTitulo").innerText = titulo;
-        document.getElementById("detalleDescripcion").innerText = descripcion;
-        document.getElementById("detalleImagen").src = imagen;
-        const modal = new bootstrap.Modal(
-          document.getElementById("detalleModal")
-        );
-        modal.show();
-      }
-    </script>
+    <!-- JS propio -->
+    <script src="script.js"></script>
   </body>
 </html>
